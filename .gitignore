@@ -1,0 +1,10 @@
+*.d
+*.o
+Release/*
+!Release/RepRapFirmware*.bin
+!Release/DuetWiFiFirmware*.bin
+*~
+*orig
+build/*
+*.pyc
+.scons*
