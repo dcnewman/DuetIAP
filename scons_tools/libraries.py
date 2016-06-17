@@ -105,6 +105,7 @@ def append_arduino_path(lib, paths, platform = 'duet', base = None):
       append_path(paths, os.path.join(base, 'asf', 'sam', 'drivers', 'dmac'))
     append_path(paths, os.path.join(base, 'asf', 'sam', 'drivers', 'efc'))
     append_path(paths, os.path.join(base, 'asf', 'sam', 'drivers', 'rstc'))
+    append_path(paths, os.path.join(base, 'asf', 'sam', 'drivers', 'rtc'))
     append_path(paths, os.path.join(base, 'asf', 'sam', 'utils'))
     append_path(paths, os.path.join(base, 'asf', 'sam', 'utils', 'header_files'))
     append_path(paths, os.path.join(base, 'asf', 'sam', 'utils', 'preprocessor'))
