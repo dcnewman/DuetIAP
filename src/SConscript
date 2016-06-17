@@ -23,11 +23,13 @@ if platform == 'duet':
   platform_dir      = 'Duet'      # platform specific sources in 'src/' + platform_dir
   variant_name      = 'duet'      # variant directory in CoreNG source tree
   coreng_libdir     = 'SAM3X8E'   # CoreNG build directory with libCoreNG.a
+  target_name       = 'iap'
 elif platform == 'ng':
   arch              = 'sam4e8e'
   platform_dir      = 'duetNG'
   variant_name      = 'duetNG'
   coreng_libdir     = 'SAM4E8E'
+  target_name       = 'iap4e'
   flags.append('-DCORE_NG')
   flags.append('-DDUET_NG')
 elif platform == 'radds':
@@ -35,6 +37,7 @@ elif platform == 'radds':
   platform_dir      = 'RADDS'
   variant_name      = 'duet'
   coreng_libdir     = 'RADDS'
+  target_name       = 'iapradds'
 else:
   raise Exception('Unrecognized platform ' + platform)
 
@@ -43,7 +46,6 @@ if arch == 'sam3x8e':
 elif arch == 'sam4e8e':
   mcpu = 'cortex-m4'
 
-target_name = 'iap-' + platform
 hex_name = target_name + '.bin'
 elf_name = target_name + '.elf'
 map_name = target_name + '.map'
